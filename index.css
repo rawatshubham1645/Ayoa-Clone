@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    /* border: 1px solid red; */
+    background-color: whitesmoke;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    opacity: 86%;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+
+}
+
+.logo {
+    width: 10%;
+    height: auto;
+    margin-left: 20px;
+
+}
+
+
+ul {
+    list-style: none;
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    display: flex;
+    width: 30vw;
+    justify-content: space-around;
+
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: grey;
+}
+
+a:hover {
+    color: #00C5FF;
+}
+
+li.active::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 100%;
+    background-color: #00C5FF;
+    left: 0;
+    bottom: 4px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    animation: appear 0.2s linear;
+
+}
+
+@keyframes appear {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.navbar>button {
+    padding: 5px 30px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    /* margin-right: 20px; */
+
+
+}
+
+.navbar>button:hover {
+    border: 1px solid #00C5FF;
+    color: grey;
+
+}
+
+.getStartedButton{
+    width:100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.getStartedButton form{
+    width: 600px;
+    height: 55px;
+    display: flex;
+}
+.getStartedButton form >input{
+    flex: 1;
+    border: 3px solid black;
+    outline: #00C5FF;
+}
+
+
+.main-head h1{
+    padding-top: 20px;
+    font-family: 'Fjalla One', sans-serif;
+    margin: 0 auto;
+    font-weight: 800;
+    font-size: 35pt;
+    color: #000000;
+    line-height: 60px;
+    margin-bottom: 30px;
+    max-width: 960px;
+    letter-spacing: 2px;
+    
+}
+.main-head span{
+    color: #00C5FF;
+}
+.main-head h3{
+    padding-top: 20px;
+    /* font-family: 'Fjalla One', sans-serif; */
+    margin: 0 auto;
+    /* font-weight: 800; */
+    font-size: 20pt;
+    color: #000000;
+    line-height: 30px;
+    margin-bottom: 30px;
+    max-width: 960px;
+    
+}
+.main-head p{
+    color: grey;
+    /* padding-top: 20px; */
+    font-size: 14px;
+}
+.slide{
+    width: 60vw;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    margin-bottom: 40px;
+
+}
+.slide div img{
+    width: 20%;
+    height: auto;
+}
+.slide div h3{
+    color: grey;
+}
+.slide div h3:hover{
+    color: rgb(177, 169, 169);
+    cursor: pointer;
+}
+.mind-Maps{
+    width: 60vw;
+    height: 60vh;
+    /* border: 1px solid black; */
+    margin:auto;
+    display: grid;
+    grid-template-columns:repeat(2,1fr) ;
+}
+.mind-Maps>div{
+    width: 90%;
+}
+
+.mind-Maps>div>div h3{
+    text-align: left;
+color: #00C5FF;
+font-size: 30px;
+letter-spacing: 1px;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+.mind-Maps>div>div p{
+    text-align: justify;
+    color: grey;
+    font-size: 20px;
+    margin-bottom: 30px;
+
+}
+#child-Mind-Maps{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+#child-Mind-Maps img{
+    width:130px;
+    margin-top: 30px;
+    display: block;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+#child-Mind-Maps img:hover{
+width: 150px;
+transition-delay: 0.2s;
+/* animation: 3s linear 1s infinite alternate slidein; */
+}
+
+#child-Mind-Maps>div+div>h4{
+    margin-top: 45px;
+   text-align: left;
+   color: #656060;
+   margin-bottom: 5px;
+}
+#child-Mind-Maps>div+div>p{
+    font-size: 15px;
+}
+.mind-Maps> div + div >img{
+    /* background-color: #000000; */
+    width: 100%;
+    height: 445px;
+    padding: 10px 10px;
+    margin: 10px 20px;
+    border-radius: 10%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}

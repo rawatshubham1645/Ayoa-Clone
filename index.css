@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 
 * {
     padding: 0;
@@ -14,11 +14,11 @@ header {
     height: 70px;
     display: flex;
     /* border: 1px solid red; */
-    background-color: whitesmoke;
+    background-color: white;
     margin: auto;
     justify-content: center;
     align-items: center;
-    opacity: 86%;
+    /* opacity: 86%; */
     justify-content: space-between;
     position: sticky;
     top: 0px;
@@ -99,25 +99,128 @@ li.active::after {
     color: grey;
 
 }
+.heading-1st{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: 25pt;
+    color: #000000;
+    margin-top: 20px;
+}
+p{
+    color: rgb(66, 58, 58);
+    margin: 20px auto;
+    line-height: 30px;
+    max-width: 700px;
+}
 
 .getStartedButton{
     width:100%;
     height: 10vh;
     display: flex;
+    /* flex-direction: row; */
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }
 .getStartedButton form{
     width: 600px;
-    height: 55px;
-    display: flex;
+    height: 80px;
+    display: flex; 
+    border:10px solid #d2ecf4;
+    border-radius: 15px;
+    
+    /* flex-direction: row;  */
 }
 .getStartedButton form >input{
-    flex: 1;
-    border: 3px solid black;
-    outline: #00C5FF;
+    flex-grow: 2;
+  
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: medium;
+    padding-left: 40px;
+}
+.getStartedButton form > a>button{
+    background-color: #00C5FF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: #fff;
+    font-size: large;
+    margin: 8px;
+    letter-spacing: 1px;
+    cursor: pointer;
+   
+}
+.getStartedButton form > a>button:hover{
+    background-color: #1989e5;
+}
+#photo-1{
+   
+    width: 90vw;
+    margin: auto;
+    margin-top: 40px;
+    /* display: block; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+}
+.below-photo-1{
+    width: 65vw;
+    height: auto;
+    
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 35px;
+
+}
+.below-photo-1 >div img{
+    width: 50%;
+}
+.below-photo-1 >div p{
+    color: #8a8181;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
+
+/* ------------------------UNriveled Flexibility----------------------- */
+.unrivled{
+    margin: 100px 0 30px 0;
+}
+
+.unrivled h2{
+    transform: rotate(2deg);
+    font-weight: 700;
+    font-size: 55px;
+}
+.unrivled span{
+    background-color: rgb(238,44,130);
+   
+    color: white;
+}
+.below-Para {
+    color: grey;
+    width: 60%;
+    margin: auto;
+    display: block;
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 70px;
+}
+.below-Para span{
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
 
 .main-head h1{
     padding-top: 20px;
@@ -163,6 +266,7 @@ li.active::after {
     margin-bottom: 40px;
 
 }
+
 .slide div img{
     width: 20%;
     height: auto;
@@ -173,7 +277,18 @@ li.active::after {
 .slide div h3:hover{
     color: rgb(177, 169, 169);
     cursor: pointer;
+  
+
 }
+@keyframes shubham {
+    from{
+        width: 0;
+    }
+    to{
+        width: auto;
+    }
+}
+
 .mind-Maps{
     width: 60vw;
     height: 60vh;
@@ -236,4 +351,45 @@ transition-delay: 0.2s;
     margin: 10px 20px;
     border-radius: 10%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.below-Mind{
+   
+    width: 80vw;
+    margin: auto;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+    margin-top: 300px;
+}
+.below-Mind img{
+    width:100%
+}
+
+.below-Mind div + div h2{
+font-size: 50px;
+text-align: justify;
+margin-top: 50px;
+}
+.below-Mind div + div{
+    margin: 10px;
+}
+.below-Mind div + div p{
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 20px;
+    color: grey;
+    }
+.below-Mind-logos{
+    margin-top: 40px;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+justify-content: left;
+}
+.below-Mind-logos img{
+   
+    width: 80%;
+    display: block;
+    align-items:center ;
+    justify-content: center;
 }

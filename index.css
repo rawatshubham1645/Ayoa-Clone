@@ -9,95 +9,61 @@
     text-align: center;
 }
 
-header {
+
+.navbar{
     width: 100%;
     height: 70px;
-    display: flex;
     /* border: 1px solid red; */
-    background-color: white;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    /* opacity: 86%; */
-    justify-content: space-between;
-    position: sticky;
-    top: 0px;
-
-}
-
-.logo {
-    width: 10%;
-    height: auto;
-    margin-left: 20px;
-
-}
-
-
-ul {
-    list-style: none;
-    /* text-decoration: none; */
-    /* display: inline-block; */
+    background-color: aliceblue;
     display: flex;
-    width: 30vw;
-    justify-content: space-around;
-
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
 }
-
-ul li {
+.logo-1{
+    width: 12%;
+    height: auto;
+    /* border: 2px solid black; */
+    margin-left: 20px;
+}
+.headings{
+    width: 40%;
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    /* text-align: center; */
+    align-items: center;
+     /* color:grey; */
     cursor: pointer;
-    position: relative;
-    text-align: center;
-
-}
-
-a {
-    text-decoration: none;
+ 
     font-size: 16px;
-    font-weight: 400;
-    color: grey;
+    margin-right: 30px;
+    margin-top: 10px;
 }
-
-a:hover {
-    color: #00C5FF;
+.headings a{
+    color:  grey;
+    text-decoration: none;
+} 
+.headings a:hover{
+    color:  #00C5FF;
+    text-decoration: none;
 }
+.navbar button{
 
-li.active::after {
-    position: absolute;
-    content: "";
-    height: 3px;
-    width: 100%;
-    background-color: #00C5FF;
-    left: 0;
-    bottom: 4px;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    animation: appear 0.2s linear;
-
-}
-
-@keyframes appear {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-.navbar>button {
-    padding: 5px 30px;
+    /* color: #d6cece; */
+    padding: 10px 25px!important;
+    margin-left: 10px;
+    display: block;
+    background-color: rgb(225, 225, 225);
     border-radius: 20px;
-    border: 1px solid grey;
-    /* margin-right: 20px; */
-
-
+    border: 1px solid rgb(184, 176, 176);
 }
-
-.navbar>button:hover {
-    border: 1px solid #00C5FF;
-    color: grey;
-
+.navbar button:hover{
+    border: 1px solid  #00C5FF;
+}
+.navbar button a:hover{
+    color:grey ;
 }
 .heading-1st{
     font-family: 'Oswald', sans-serif;
@@ -106,7 +72,7 @@ li.active::after {
     color: #000000;
     margin-top: 20px;
 }
-p{
+.para p{
     color: rgb(66, 58, 58);
     margin: 20px auto;
     /* line-height: 30px; */
@@ -141,20 +107,25 @@ p{
     font-size: medium;
     padding-left: 40px;
 }
-.getStartedButton form > button > a{
-    background-color:#008FF7; 
-    padding: 10px 20px;
+form button{
     border: none;
+    background-color: white;
+}
+ form >button> a{
+    background-color:#008FF7;
+    padding: 10px 20px;
+    /* border: none; */
     border-radius: 10px;
     outline: none;
     color: #fff;
     font-size: large;
     margin: 8px;
-    letter-spacing: 1px;
+    text-decoration: none;
+    /* letter-spacing: 1px; */
     cursor: pointer;
    
 }
-.getStartedButton form >button > a:hover{
+.getStartedButton form > a>button:hover{
     background-color: #1989e5;
 }
 #photo-1{
@@ -267,15 +238,23 @@ p{
     margin-bottom: 40px;
 
 }
-
+.slide div{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
 .slide div img{
     width: 20%;
     height: auto;
 }
 .slide div h3{
-    color: grey;
+    margin-top: 3px;
 }
-.slide div h3:hover{
+.slide div h3 a{
+    color: grey;
+    text-decoration: none;
+}
+.slide div h3 a:hover{
     color: rgb(177, 169, 169);
     cursor: pointer;
   
@@ -450,43 +429,49 @@ h2 img{
 }
 
 /* ----------------------------footer---------------- */
+
 .footer-container{
     width: 100%;
-    height: auto;
+        height: 600px;
+   
     background-color:  #002638;
-}
-.footer-links{
     
-    width: 80%;
-    height: 600px;
-    /* border: 1px solid white; */
-    margin: auto;
-    /* margin-top: 80px; */
-    display: grid; 
+}
+.footer-container .footer-links{
+    width: 60%;
+    height: auto;
+    display: grid;
     grid-template-columns: repeat(5,1fr);
+    /* border: 1px solid white; */
+    column-gap: 20px;
+    margin: auto;
+    align-items: center;
+    text-align: none;
 
-    /* justify-content: center;  */
-    align-items: center; 
+}
+.ayoa,.Use-cases,.support,.service,.download{
+    width: 100%;
+    height: 100%;
     
-    
+    /* border: 1px solid red; */
+    margin-top: 95px;
 }
 
-.footer-container p{
+ #id-ayoa,#id-news,#id-cases,#id-support,#id-services,#id-legal,#id-download{
+    
+ 
     color: white;
-    font-size: 19px;
-    justify-content: left;
-    text-align: left;
-    margin-top: -10px;
+    margin: 10px 0;
+}
+.footer-links a{
+    color: rgb(74, 97, 124);
+    line-height: 27px;
+    text-decoration: none;
     
 }
-.footer-container p a{
-    color: rgb(159, 152, 152);
-    font-size: 13px;
-    /* text-align: left; */
-    
-}
-.footer-container p a:hover{
-    color: white;
+.footer-links a:hover{
+    color: whitesmoke;
+   
 }
 .footer-logo{
     width: 60%;
@@ -503,6 +488,7 @@ h2 img{
 opacity:0px;
 cursor: pointer;
 }
+/* -------------------------------------------------------------- */
 .main-footer{
     width: 100%;
     height: 150px;
@@ -517,14 +503,7 @@ cursor: pointer;
 .main-footer-logo{
     display: flex;
 }
-/* .vl {
-    border-left: 2px solid grey;
-    height: 50px;
-    position: absolute;
-    left: 13%;
-    /* margin-left: -3px; */
-    /* top: 0; */
-  /* }  */
+
   .social-media .social{
     padding: 0px 30px 0 0;
   }
@@ -536,7 +515,6 @@ cursor: pointer;
 .social a:hover{
     
     color: grey;
-    transition-delay: 0.2s;
    
 }
 
